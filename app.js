@@ -9,3 +9,7 @@ return score1 + score2;
 };
 twoRandomScores();
 
+// 3. Communicate the randomly assigned card value to the player
+var randomScore = Math.floor((Math.random() * 52) + 1);
+
+console.log("I got the score " + randomScore);
