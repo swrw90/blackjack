@@ -19,3 +19,14 @@ var deal = Math.floor((Math.random() * 52) + 1);
 var final = deal % 13;
 
 console.log(final);
+
+// 5. Determine if cards value is even or odd
+var outcome;
+var deal = Math.floor((Math.random() * 40) + 1);
+if (deal % 2 == 0) {
+    outcome = "even" 
+}
+else 
+{
+  outcome = "odd";
+};
