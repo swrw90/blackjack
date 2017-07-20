@@ -2,10 +2,10 @@
 var randomRating = Math.floor((Math.random() * 10) + 1);
 
 // 2. Sum of random nums from 1 through 10
-var twoRandomScores = function() {
-var score1 = Math.floor((Math.random() * 10) + 1);
-var score2 = Math.floor((Math.random() * 10) + 1);
-return score1 + score2;
+var twoRandomScores = function () {
+    var score1 = Math.floor((Math.random() * 10) + 1);
+    var score2 = Math.floor((Math.random() * 10) + 1);
+    return score1 + score2;
 };
 twoRandomScores();
 
@@ -24,11 +24,10 @@ console.log(final);
 var outcome;
 var deal = Math.floor((Math.random() * 40) + 1);
 if (deal % 2 == 0) {
-    outcome = "even" 
+    outcome = "even"
 }
-else 
-{
-  outcome = "odd";
+else {
+    outcome = "odd";
 };
 
 
@@ -42,8 +41,8 @@ var card = Math.floor((Math.random() * 52) + 1);
 // It should return a random number between 1 and 52
 
 var deal = function () {
-var card = Math.floor((Math.random() * 52) + 1);
-return card;
+    var card = Math.floor((Math.random() * 52) + 1);
+    return card;
 };
 
 // Declare two variables 
@@ -53,9 +52,9 @@ var card2 = deal();
 
 // The deal function will return one random card
 var deal = function () {
-var card = Math.floor((Math.random() * 52) + 1);
-return card;
-    };
+    var card = Math.floor((Math.random() * 52) + 1);
+    return card;
+};
 
 // Declare two variables card1 and card2
 var card1 = deal;
@@ -64,8 +63,37 @@ var card2 = deal;
 // Define a function called score, which will assign points by
 // adding up the cards: 
 
-var score = function() {
-return card1 + card2;
-    }
+var score = function () {
+    return card1 + card2;
+}
 console.log("You have cards " + card1 + " and " + card2 +
-        " for a score of " + score());
+    " for a score of " + score());
+
+
+
+// The deal function will return a random card
+var deal = function () {
+    var card = Math.floor((Math.random() * 52) + 1);
+    return card;
+};
+// Deal out our first hand by declaring variables card1 and card2
+var card1 = deal();
+var card2 = deal();
+
+// Define a function getValue that returns the remainder when card
+// is divided by 13
+// Make a getValue function here, which should convert a card to
+// the value that card is worth
+var getValue = function (card) {
+    var newCard = card % 13;
+    return newCard;
+};
+
+// Return the score of our hand
+var score = function () {
+    var total = getValue(card1) + getValue(card2);
+    return total
+};
+
+console.log("You have cards " + card1 + " and " + card2 +
+    " for a score of " + score());
