@@ -30,3 +30,42 @@ else
 {
   outcome = "odd";
 };
+
+
+// BEGIN GAME
+
+confirm("Are you ready to play blackjack?");
+
+var card = Math.floor((Math.random() * 52) + 1);
+
+// Define a function called deal
+// It should return a random number between 1 and 52
+
+var deal = function () {
+var card = Math.floor((Math.random() * 52) + 1);
+return card;
+};
+
+// Declare two variables 
+// For both variables, assign values gotten by calling the function
+var card1 = deal();
+var card2 = deal();
+
+// The deal function will return one random card
+var deal = function () {
+var card = Math.floor((Math.random() * 52) + 1);
+return card;
+    };
+
+// Declare two variables card1 and card2
+var card1 = deal;
+var card2 = deal;
+
+// Define a function called score, which will assign points by
+// adding up the cards: 
+
+var score = function() {
+return card1 + card2;
+    }
+console.log("You have cards " + card1 + " and " + card2 +
+        " for a score of " + score());
