@@ -97,3 +97,24 @@ var score = function () {
 
 console.log("You have cards " + card1 + " and " + card2 +
     " for a score of " + score());
+
+// ========================================
+
+// Get suit
+function getTheSuit() {
+    var suit = Math.floor(Math.random() * 4) + 1
+    if (suit === 1) {
+        return "Hearts";
+    }
+    if (suit === 2) {
+        return "Diamonds";
+    }
+    if (suit === 3) {
+        return "Spades";
+    }
+    if (suit === 4) {
+        return "Clubs";
+    }
+}
+
+
