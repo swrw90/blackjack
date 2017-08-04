@@ -172,3 +172,30 @@ function HUMAN() {
 var whoWonH = 0;
 var whoWonC = 0;
 
+// Check for bust and if player wins or loses
+function determineWinner() {
+    var a = parseInt(document.getElementById("you").value);
+    var b = parseInt(document.getElementById("dealer").value);
+    if (b > 21) {
+        whoWonH += 1;
+        document.getElementById("humanWon").innerHTML = whoWonH;
+        var winner = document.getElementById("human").innerHTML = "I win!";
+        return;
+    }
+    if (a === b) {
+        var a = document.getElementById("human").innerHTML = "Tie";
+        var b = document.getElementById("computer").innerHTML = "Tie";
+    }
+
+    if (a > b) {
+        whoWonH += 1;
+        document.getElementById("human").innerHTML = whoWonH;
+        var a = document.getElementById("human").innerHTML = "I win!";
+    }
+    if (b > a) {
+        whoWonC += 1;
+        document.getElementById("compWon").innerHTML = whoWonC;
+        var g = document.getElementById("computer").innerHTML = "I win!";
+        var g = document.getElementById("computer").innerHTML = "I win!";
+    }
+}
