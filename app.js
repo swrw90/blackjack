@@ -99,6 +99,7 @@ console.log("You have cards " + card1 + " and " + card2 +
     " for a score of " + score());
 
 // ========================================
+// **TEST BUILD**
 
 // Get suit
 function getTheSuit() {
@@ -146,8 +147,6 @@ function GenerateNewCard() {
     res.value = aa + getACard("Dealer");
 }
 
-
-
 // This checks if computer has less than 17 points
 function COMPUTER() {
     var a = parseInt(document.getElementById("dealer").value);
@@ -157,3 +156,19 @@ function COMPUTER() {
         res.value = b + getACard("Dealer");
     }
 }
+
+// If user has more than 21 then computer wins
+function HUMAN() {
+    var a = parseInt(document.getElementById("you").value);
+    var res = document.getElementById("you");
+    res.value = a + getACard("You");
+    if (res.value > 21) {
+        whoWonC += 1;
+        document.getElementById("compWon").innerHTML = whoWonC;
+        var a = document.getElementById("computer").innerHTML = "I win!";
+    }
+}
+
+var whoWonH = 0;
+var whoWonC = 0;
+
