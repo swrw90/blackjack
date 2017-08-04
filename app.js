@@ -145,3 +145,15 @@ function GenerateNewCard() {
     resa.value = a + getACard("You");
     res.value = aa + getACard("Dealer");
 }
+
+
+
+// This checks if computer has less than 17 points
+function COMPUTER() {
+    var a = parseInt(document.getElementById("dealer").value);
+    var res = document.getElementById("dealer");
+    while (res.value < 17) {
+        var b = parseInt(document.getElementById("dealer").value);
+        res.value = b + getACard("Dealer");
+    }
+}
