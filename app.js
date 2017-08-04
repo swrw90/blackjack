@@ -129,3 +129,19 @@ function getACard(turn) {
     }
     return card;
 }
+
+var counter = 0;
+
+
+// Deal cards, , computer & human start at 0 points
+// Then gives a card to user and computer by calling getComputedStyle()
+function GenerateNewCard() {
+    counter += 1;
+    var d = document.getElementById("human").innerHTML = "";
+    var e = document.getElementById("computer").innerHTML = "";
+    var f = document.getElementById("count").innerHTML = counter;
+    var a = parseInt(document.getElementById("dealer").value = 0);
+    var resa = document.getElementById("you");
+    resa.value = a + getACard("You");
+    res.value = aa + getACard("Dealer");
+}
