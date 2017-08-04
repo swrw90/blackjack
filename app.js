@@ -97,3 +97,105 @@ var score = function () {
 
 console.log("You have cards " + card1 + " and " + card2 +
     " for a score of " + score());
+
+// ========================================
+// **TEST BUILD**
+
+// Get suit
+function getTheSuit() {
+    var suit = Math.floor(Math.random() * 4) + 1
+    if (suit === 1) {
+        return "Hearts";
+    }
+    if (suit === 2) {
+        return "Diamonds";
+    }
+    if (suit === 3) {
+        return "Spades";
+    }
+    if (suit === 4) {
+        return "Clubs";
+    }
+}
+
+// Get a card
+function getACard(turn) {
+    var card = Math.floor(Math.random() * 13) + 1
+    suit = getTheSuit();
+    if (card === 1) {
+        return 11;
+    }
+    if (card > 10) {
+        return 10;
+    }
+    return card;
+}
+
+var counter = 0;
+
+
+// Deal cards, , computer & human start at 0 points
+// Then gives a card to user and computer by calling getComputedStyle()
+function GenerateNewCard() {
+    counter += 1;
+    var d = document.getElementById("human").innerHTML = "";
+    var e = document.getElementById("computer").innerHTML = "";
+    var f = document.getElementById("count").innerHTML = counter;
+    var a = parseInt(document.getElementById("dealer").value = 0);
+    var resa = document.getElementById("you");
+    resa.value = a + getACard("You");
+    res.value = aa + getACard("Dealer");
+}
+
+// This checks if computer has less than 17 points
+function COMPUTER() {
+    var a = parseInt(document.getElementById("dealer").value);
+    var res = document.getElementById("dealer");
+    while (res.value < 17) {
+        var b = parseInt(document.getElementById("dealer").value);
+        res.value = b + getACard("Dealer");
+    }
+}
+
+// If user has more than 21 then computer wins
+function HUMAN() {
+    var a = parseInt(document.getElementById("you").value);
+    var res = document.getElementById("you");
+    res.value = a + getACard("You");
+    if (res.value > 21) {
+        whoWonC += 1;
+        document.getElementById("compWon").innerHTML = whoWonC;
+        var a = document.getElementById("computer").innerHTML = "I win!";
+    }
+}
+
+var whoWonH = 0;
+var whoWonC = 0;
+
+// Check for bust and if player wins or loses
+function determineWinner() {
+    var a = parseInt(document.getElementById("you").value);
+    var b = parseInt(document.getElementById("dealer").value);
+    if (b > 21) {
+        whoWonH += 1;
+        document.getElementById("humanWon").innerHTML = whoWonH;
+        var winner = document.getElementById("human").innerHTML = "I win!";
+        return;
+    }
+    if (a === b) {
+        var a = document.getElementById("human").innerHTML = "Tie";
+        var b = document.getElementById("computer").innerHTML = "Tie";
+    }
+
+    if (a > b) {
+        whoWonH += 1;
+        document.getElementById("human").innerHTML = whoWonH;
+        var a = document.getElementById("human").innerHTML = "I win!";
+    }
+    if (b > a) {
+        whoWonC += 1;
+        document.getElementById("compWon").innerHTML = whoWonC;
+        var g = document.getElementById("computer").innerHTML = "I win!";
+        var g = document.getElementById("computer").innerHTML = "I win!";
+    }
+}
