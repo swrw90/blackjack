@@ -117,4 +117,15 @@ function getTheSuit() {
     }
 }
 
-
+// Get a card
+function getACard(turn) {
+    var card = Math.floor(Math.random() * 13) + 1
+    suit = getTheSuit();
+    if (card === 1) {
+        return 11;
+    }
+    if (card > 10) {
+        return 10;
+    }
+    return card;
+}
