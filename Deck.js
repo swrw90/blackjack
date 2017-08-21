@@ -9,4 +9,12 @@ class Deck {
         let suit = Math.floor(Math.random() * 4) + 1;
         return new Card(suit, value);
     }
+
+    static deal() {
+        return [Deck.generateCard(), Deck.generateCard()];
+    }
+
+    static hit() {
+        return Deck.generateCard();
+    }
 };
