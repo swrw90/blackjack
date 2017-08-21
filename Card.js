@@ -8,6 +8,7 @@ class Card {
         this._suitValue = suitValue;
         this._number = number;
     }
+
     get suit() {
         switch (this._suitValue) {
             case 1: return "Spades";
@@ -18,6 +19,10 @@ class Card {
     }
 
     get value() {
-        
+        if (this._number === KING || this._number === QUEEN || this._number === JACK) {
+            return 10;
+        } else {
+            return this._number;
+        }
     }
-}
+};
