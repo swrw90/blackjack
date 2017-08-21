@@ -24,3 +24,5 @@ class Dealer {
         this.isDone = true;
     }
 };
+
+module.exports = Dealer;

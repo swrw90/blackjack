@@ -18,3 +18,5 @@ class Deck {
         return Deck.generateCard();
     }
 };
+
+module.exports = Deck;

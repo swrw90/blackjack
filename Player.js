@@ -24,3 +24,5 @@ class Player {
         this.isDone = true;
     }
 };
+
+module.exports = Player;
