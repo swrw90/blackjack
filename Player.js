@@ -1,3 +1,5 @@
+let Deck = require('./Deck.js');
+
 class Player {
     constructor(hand) {
         this.hand = hand;
