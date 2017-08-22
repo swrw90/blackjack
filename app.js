@@ -1,6 +1,5 @@
-let Card = require('./Card.js');
-let Dealer = require('./Dealer.js');
 let Deck = require('./Deck.js');
+let Dealer = require('./Dealer.js');
 let Player = require('./Player.js');
 let readlineSync = require('readline-sync');
 
