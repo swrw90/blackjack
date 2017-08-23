@@ -3,6 +3,7 @@ let Card = require('./Card.js');
 const NUMBER_OF_CARDS = 52;
 const NUMBERS_IN_SUIT = 13;
 
+// Responsible for suit & value of the card and the deal or hit.
 class Deck {
     constructor() {
     }
