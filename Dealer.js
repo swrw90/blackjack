@@ -1,6 +1,6 @@
 class Dealer {
-    constructor(hand) {
-        this.hand = hand;
+    constructor() {
+        this.hand = [];
         this.isDone = false;
         this.isBusted = false;
     }
@@ -13,8 +13,8 @@ class Dealer {
         return handTotal;
     }
 
-    hit() {
-        this.hand.push(Deck.hit());
+    hit(card) {
+        this.hand.push(card);
         if (this.totalOfHand > 21) {
             this.isBusted = true;
         }
@@ -22,7 +22,17 @@ class Dealer {
 
     stay() {
         this.isDone = true;
-    }
+    };
+
+    reset() {
+        this.hand = [];
+        this.isDone = false;
+        this.isBusted = false;
+    };
+
+    startNewGame(cards) {
+        this.hand = cards;
+    };
 };
 
 module.exports = Dealer;
