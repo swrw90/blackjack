@@ -16,10 +16,6 @@ class Deck {
     static deal() {
         return [Deck.generateCard(), Deck.generateCard()];
     }
-
-    static hit() {
-        return Deck.generateCard();
-    }
 };
 
 module.exports = Deck;

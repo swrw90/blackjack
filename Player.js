@@ -1,9 +1,6 @@
-let Deck = require('./Deck.js');
-
-
 class Player {
-    constructor(hand) {
-        this.hand = hand;
+    constructor() {
+        this.hand = [];
         this.isDone = false;
         this.isBusted = false;
         this.score = 0;
@@ -14,11 +11,12 @@ class Player {
         for (let i = 0; i < this.hand.length; i++) {
             handTotal += this.hand[i].value;
         };
+
         return handTotal;
     }
 
-    hit() {
-        this.hand.push(Deck.hit());
+    hit(card) {
+        this.hand.push(card);
         if (this.totalOfHand > 21) {
             this.isBusted = true;
         }
@@ -30,6 +28,16 @@ class Player {
 
     incrementScore() {
         this.score++;
+    }
+
+    reset() {
+        this.hand = [];
+        this.isDone = false;
+        this.isBusted = false;
+    };
+
+    startNewGame(cards) {
+        this.hand = cards;
     }
 };
 
