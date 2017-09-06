@@ -73,7 +73,6 @@ let player = new Player();
 let dealer = new Dealer();
 
 var playGame = readlineSync.question('Play a game of Blackjack? Yes or No' + "\n").toUpperCase();
-console.log(playGame);
 while (playGame === "YES") {
     startPlayerTurn();
     startDealerTurn();
